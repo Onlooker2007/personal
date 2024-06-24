@@ -225,3 +225,25 @@
   new PureCounter();
 
 })()
+
+$(document).ready(function() {
+  function checkVisibility() {
+      $('ul#time-line li').each(function() {
+          var stop = $(window).scrollTop() + $(window).height() / 1.2;
+          var litop = $(this).offset().top;
+          if (stop > litop) {
+              $(this).addClass('visibility');
+          } else {
+              $(this).removeClass('visibility');
+          }
+      });
+  }
+
+  // Initial check
+  checkVisibility();
+
+  // Check on scroll
+  $(window).scroll(function() {
+      checkVisibility();
+  });
+});
