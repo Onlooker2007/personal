@@ -643,7 +643,27 @@ section {
   height: 100%;
   border-radius: 0px;
 }
-
+.services .icon-box1:hover::before {
+  background-image:  url("https://i.imgur.com/bFmNJSS.png");
+  background-size: 150% 100%;
+  background-position-x: center;
+}
+.services .icon-box2:hover::before {
+  background-image:  url("https://i.imgur.com/Dela5AQ.jpg");
+  background-size: 135% 100%;
+  background-position-x: center;
+}
+.services .icon-box3:hover::before {
+  background-image:  url("https://i.imgur.com/3dhyqAU.jpg");
+  background-size: 100% 120%;
+  background-position-x: center;
+  background-position-y: center;
+}
+.services .icon-box4:hover::before {
+  background-image:  url("https://i.imgur.com/nXpwduc.jpg");
+  background-size: 150% 100%;
+  background-position-x: center;
+}
 .services .icon {
   margin: 0 auto 30px auto;
   padding-top: 10px;
