@@ -247,3 +247,27 @@ $(document).ready(function() {
       checkVisibility();
   });
 });
+
+// Array of image URLs to cycle through
+const imageUrls = [
+  "https://imgur.com/8TlmuMo.jpg",
+  "https://imgur.com/0lGQUl0.jpg",
+  "https://imgur.com/hdu4TKa.jpg"
+]
+
+let currentImageIndex = 0;
+
+function changeBackgroundImage() {
+  const heroElement = document.getElementById("hero"); // Or however you select your element
+
+  if (heroElement) {
+    heroElement.style.backgroundImage = `url("${imageUrls[currentImageIndex]}")`;
+
+    currentImageIndex = (currentImageIndex + 1) % imageUrls.length; // Cycle through the array
+  } else {
+    console.error("Element with id 'hero' not found!");
+  }
+}
+
+// Call the function every 3 seconds (3000 milliseconds)
+setInterval(changeBackgroundImage, 3000);
