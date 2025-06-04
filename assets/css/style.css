@@ -307,9 +307,11 @@ h6 {
 #hero {
   width: 100%;
   height: 75vh;
-  background: url("https://i.imgur.com/8TlmuMo.jpg") top center;
+  background: url("https://imgur.com/hdu4TKa.jpg") top center;
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 0 15px;
+  transition: 1s;
 }
 
 #hero h1 {
@@ -789,6 +791,10 @@ section {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+  a {
+    color: white;
+    border-bottom: solid white 2px;
+  }
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
@@ -835,7 +841,7 @@ section {
 
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
-  bottom: calc(50% - 50px);
+  bottom: calc(20% - 50px);
 }
 
 .portfolio-details {
