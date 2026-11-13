@@ -1,0 +1,13 @@
+{
+  "name": "donald-personal-site",
+  "private": true,
+  "scripts": {
+    "build:skills": "node tools/build-skill-pool.cjs",
+    "build:doggie": "node tools/build-doggie.cjs",
+    "check:doggie": "node tools/check-doggie.cjs",
+    "preview": "node tools/preview.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

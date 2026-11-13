@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Doggie 四足機器狗專案：旋轉、拆解與探索依實物照片重建的互動 3D 模型。">
+  <meta name="theme-color" content="#f4f3ed">
+  <title>Doggie — Robot Dog Kit | Donald</title>
+  <link rel="icon" type="image/svg+xml" href="assets/doggie-icon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="doggie.bundle.js"></script>
+  <script src="../assets/js/project-embed.js"></script>
+  <link rel="stylesheet" href="../assets/css/project-embed.css">
+</head>
+<body id="page-top">
+  <header class="site-header">
+    <a class="brand" href="../index.html#services" aria-label="返回 Donald 主頁 Projects"><img class="brand-mark" src="assets/doggie-icon.svg" width="35" height="35" alt="Doggie"> DONALD <span class="brand-divider">/</span> PROJECTS</a>
+    <nav aria-label="Project navigation"><a href="#explorer">3D Explorer</a><a href="#build">Build Notes</a><a href="#gallery">Gallery <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section id="explorer" class="explorer" aria-labelledby="project-title">
+      <div class="workspace">
+        <div class="viewport-wrap">
+          <div class="viewport-heading">
+            <h1 id="project-title" class="viewport-title">Meet Doggie<span class="orange">.</span></h1>
+            <div class="model-controls" role="group" aria-label="Model controls"><button data-mode="exploded" aria-pressed="false">Disassemble</button><button data-mode="assembled" class="active" aria-pressed="true">Assemble</button><button data-mode="xray" aria-pressed="false">X-ray</button><button id="walk" aria-pressed="false">Walk</button></div>
+          </div>
+
+          <div id="viewport" tabindex="0" role="application" aria-label="互動機器狗模型。拖曳或方向鍵旋轉，按住 Ctrl 加滾輪或使用加減鍵縮放，普通滾輪捲動頁面，點擊零件反白顯示。"><div id="fallback" hidden><img src="assets/doggie-front.jpg" alt="Doggie 實體機器狗"><p>此裝置無法啟用 3D，仍可瀏覽下方實作照片。</p></div></div>
+
+          <div id="interaction-hint" class="interaction-hint" role="status" aria-live="polite" hidden>
+            <div id="rotate-hint" class="hint-step">
+              <svg class="hint-arrows" viewBox="0 0 100 48" fill="none" aria-hidden="true"><path d="M40 24H8m0 0L23 9M8 24l15 15M60 24h32m0 0L77 9m15 15L77 39" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <p>Drag to rotate</p>
+            </div>
+            <div id="zoom-hint" class="hint-step" hidden><p class="hint-shortcut">CTRL + Scroll</p><p>Zoom in &amp; out</p></div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section id="build" class="build-section" lang="en">
+      <div class="section-heading">
+        <div><p class="eyebrow">PROJECT OVERVIEW</p><h2>Doggie Robot Dog Kit</h2></div>
+        <p>A quadruped robot built from a Robot Dog Kit,<br>combining a Raspberry Pi, servo motors, and sensors.</p>
+      </div>
+      <div class="build-steps">
+        <article>
+          <span class="step-number">01 / GOAL</span>
+          <h3>Goal</h3>
+          <p>The goal was to assemble a Raspberry Pi-based robot dog and understand how its mechanical structure, servo motors, and sensors work together. The project focused on connecting software with physical hardware through a hands-on build.</p>
+          <button data-focus-layer="frame">View the frame ↗</button>
+        </article>
+        <article>
+          <span class="step-number">02 / PROCESS</span>
+          <h3>Build Process</h3>
+          <p>The build used acrylic frame parts, servo motors, a Raspberry Pi, a servo control board, an ultrasonic sensor, and a camera. I assembled the body and four legs, mounted the motors and circuit boards, and connected the power leads, servo cables, and camera ribbon cable.</p>
+          <p>I used Visual Studio Code to edit the project code and set up the development environment on the Raspberry Pi. The work covered both the physical assembly and the software setup needed to develop the robot.</p>
+          <button data-focus-layer="motion">View the drive system ↗</button>
+        </article>
+        <article>
+          <span class="step-number">03 / RESULT</span>
+          <h3>Results</h3>
+          <p>The robot's physical assembly was completed and documented with photos of the parts, assembled robot, and development setup. An interactive 3D page was also built with HTML, CSS, JavaScript, and Three.js. Visitors can rotate and zoom the model, inspect its exploded and X-ray views, and play a simulated walking animation.</p>
+          <button data-focus-layer="sensors">View the sensors ↗</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section" lang="en" aria-label="Doggie project photos"><div class="section-heading"><div><p class="eyebrow">PROJECT PHOTOS</p><h2>Build Gallery</h2></div><span class="gallery-count">04 PHOTOGRAPHS / BUILD RECORD</span></div><div class="photo-grid"><button class="photo-card" data-photo="0"><img src="assets/doggie-parts.jpg" loading="lazy" alt="Acrylic frame parts, servo horns, motors, and the power board laid out before assembly"><span><b>01</b> Kit components <i>↗</i></span></button><button class="photo-card" data-photo="1"><img src="assets/doggie-front.jpg" loading="lazy" alt="Front-side view of the assembled Doggie, showing the sensor head and four legs"><span><b>02</b> Assembled Doggie <i>↗</i></span></button><button class="photo-card" data-photo="2"><img src="assets/doggie-kit.jpg" loading="lazy" alt="Doggie next to the Robot Dog Kit packaging"><span><b>03</b> Robot and kit packaging <i>↗</i></span></button><button class="photo-card" data-photo="3"><img src="assets/doggie-workbench.jpg" loading="lazy" alt="Doggie and its Raspberry Pi on the workbench with the software development setup"><span><b>04</b> Raspberry Pi development setup <i>↗</i></span></button></div></section>
+  </main>
+  <footer><a class="footer-brand" href="../index.html#services">Donald<span class="orange">.</span></a><span>BUILT TO LEARN. MADE TO EXPLORE.</span></footer>
+  <a class="doggie-back-to-top" href="#page-top" aria-label="Back to top" title="Back to top" hidden>
+    <svg class="doggie-up-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20V4M5 11l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <img src="assets/doggie-icon.svg" width="38" height="38" alt="" aria-hidden="true">
+  </a>
+  <dialog id="photo-dialog" lang="en" aria-label="Doggie project photos"><button id="close-photo" aria-label="Close photo">Close ✕</button><button id="prev-photo" aria-label="Previous photo">←</button><figure><img id="large-photo" alt=""><figcaption id="photo-caption"></figcaption></figure><button id="next-photo" aria-label="Next photo">→</button></dialog>
+</body>
+</html>

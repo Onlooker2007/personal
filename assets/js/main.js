@@ -100,6 +100,9 @@
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
+    const expanded = select('#navbar').classList.contains('navbar-mobile')
+    this.setAttribute('aria-expanded', String(expanded))
+    this.setAttribute('aria-label', expanded ? 'Close navigation' : 'Open navigation')
   })
 
 
@@ -121,6 +124,8 @@
         let navbarToggle = select('.mobile-nav-toggle')
         navbarToggle.classList.toggle('bi-list')
         navbarToggle.classList.toggle('bi-x')
+        navbarToggle.setAttribute('aria-expanded', 'false')
+        navbarToggle.setAttribute('aria-label', 'Open navigation')
       }
       scrollto(this.hash)
     }
@@ -143,14 +148,20 @@
         layoutMode: 'fitRows'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      portfolioContainer.querySelectorAll('img').forEach(img => {
+        img.addEventListener('load', () => portfolioIsotope.layout());
+      });
 
-      on('click', '#portfolio-flters li', function(e) {
+      let portfolioFilters = select('#portfolio-flters button', true);
+
+      on('click', '#portfolio-flters button', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
           el.classList.remove('filter-active');
+          el.setAttribute('aria-pressed', 'false');
         });
         this.classList.add('filter-active');
+        this.setAttribute('aria-pressed', 'true');
 
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
@@ -226,48 +237,30 @@
 
 })()
 
-$(document).ready(function() {
-  function checkVisibility() {
-      $('ul#time-line li').each(function() {
-          var stop = $(window).scrollTop() + $(window).height() / 1.2;
-          var litop = $(this).offset().top;
-          if (stop > litop) {
-              $(this).addClass('visibility');
-          } else {
-              $(this).removeClass('visibility');
-          }
-      });
-  }
-
-  // Initial check
-  checkVisibility();
-
-  // Check on scroll
-  $(window).scroll(function() {
-      checkVisibility();
+// Move each background from left to right while keeping the hero text stationary.
+if (document.querySelector('.hero-carousel')) {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const heroCarousel = new Swiper('.hero-carousel', {
+    loop: true,
+    speed: 900,
+    allowTouchMove: false,
+    a11y: false,
+    autoplay: reducedMotion.matches ? false : {
+      delay: 3000,
+      reverseDirection: true,
+      disableOnInteraction: false
+    }
   });
-});
-
-// Array of image URLs to cycle through
-const imageUrls = [
-  "https://imgur.com/8TlmuMo.jpg",
-  "https://imgur.com/0lGQUl0.jpg",
-  "https://imgur.com/hdu4TKa.jpg"
-]
-
-let currentImageIndex = 0;
-
-function changeBackgroundImage() {
-  const heroElement = document.getElementById("hero"); // Or however you select your element
-
-  if (heroElement) {
-    heroElement.style.backgroundImage = `url("${imageUrls[currentImageIndex]}")`;
-
-    currentImageIndex = (currentImageIndex + 1) % imageUrls.length; // Cycle through the array
-  } else {
-    console.error("Element with id 'hero' not found!");
-  }
+  reducedMotion.addEventListener('change', event => {
+    if (event.matches) {
+      heroCarousel.autoplay.stop();
+    } else {
+      heroCarousel.params.autoplay = {
+        delay: 3000,
+        reverseDirection: true,
+        disableOnInteraction: false
+      };
+      heroCarousel.autoplay.start();
+    }
+  });
 }
-
-// Call the function every 3 seconds (3000 milliseconds)
-setInterval(changeBackgroundImage, 3000);

@@ -1,0 +1,31 @@
+/* Opt-in canvas-only view for the homepage's portrait project cards. */
+html.project-embed,
+.project-embed body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+.project-embed body > :not(main):not(script) { display: none !important; }
+.project-embed main { width: 100%; height: 100%; margin: 0; padding: 0; }
+.project-embed main > :not(#explorer):not(#experience) { display: none !important; }
+.project-embed #explorer,
+.project-embed .workspace,
+.project-embed .viewport-wrap,
+.project-embed #viewport,
+.project-embed #experience,
+.project-embed #stage {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.project-embed #explorer { display: block !important; }
+.project-embed .workspace { display: block !important; }
+.project-embed #viewport { background: #f4f3ed; }
+.project-embed .viewport-heading,
+.project-embed #interaction-hint,
+.project-embed #experience > :not(#stage):not(#loading) { display: none !important; }
+.project-embed canvas { display: block; width: 100%; height: 100%; }

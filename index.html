@@ -6,8 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Donald Profile</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Donald is an NTU EE sophomore interested in programming and robotics. Explore his projects, skills, and achievements." name="description">
 
 
   <link href="https://i.imgur.com/mai4RKZ.png" rel="icon">
@@ -15,7 +14,6 @@
 
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -29,9 +27,16 @@
 <body>
 
   <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
+    <div class="hero-carousel swiper" aria-hidden="true">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://i.imgur.com/8TlmuMo.jpg" alt="" fetchpriority="high"></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/0lGQUl0.jpg" alt="" decoding="async"></div>
+        <div class="swiper-slide"><img src="https://i.imgur.com/hdu4TKa.jpg" alt="" decoding="async"></div>
+      </div>
+    </div>
     <h1>Hi, I'm Donald!</h1>
-    <h2>I am a student</h2>
-    <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
+    <h2>NTU EE sophomore</h2>
+    <a href="#about" class="btn-get-started scrollto" aria-label="Read about Donald"><i class="bi bi-chevron-double-down"></i></a>
   </section>
 
 
@@ -43,15 +48,17 @@
 
       </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
+      <nav id="navbar" class="navbar" aria-label="Main navigation">
+        <ul id="navigation-links">
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Projects</a></li>
+          <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
           <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Certificattion</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Certification</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <button type="button" class="bi bi-list mobile-nav-toggle" aria-label="Open navigation" aria-controls="navigation-links" aria-expanded="false"></button>
       </nav>
 
     </div>
@@ -63,13 +70,13 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="row no-gutters">
+        <div class="row g-0">
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
           <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
             <div class="content d-flex flex-column justify-content-center">
               <h3>About me </h3>
               <p>
-                I am an F6 student and I am almost graduated from cdsj5. My interests are writing programs and playing volleyball and basketball. Now take a programming class to learn more about how to program. I once participated in the school volleyball team, and also participated in the school leaders, students and other organizations.
+                I am an Electrical Engineering student at National Taiwan University, interested in programming and robotics. I enjoy exploring how software interacts with physical systems through hands-on projects. Outside of coding, I play volleyball and basketball.
               </p>
               <div class="row">
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
@@ -100,7 +107,7 @@
                   <div class="count-box">
                     <i class="bi bi-award"></i>
                     <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Awards</strong> received for.</p>
+                    <p><strong>Awards</strong> earned in competitions and academic activities.</p>
                   </div>
                 </div>
               </div>
@@ -110,200 +117,209 @@
 
       </div>
     </section>
+
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>A selection of my projects in programming, robotics, and hardware, exploring how code brings ideas into the physical world.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <article class="project-model-card" aria-label="6x6x6 Light Cube">
+              <a class="project-model-heading" href="led-cube/index.html">
+                <h3>6x6x6 LIGHT CUBE</h3><span class="project-model-more">See more <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </a>
+              <iframe class="project-model-view" src="led-cube/index.html?embed=1" title="6x6x6 Light Cube interactive 3D preview" loading="lazy"></iframe>
+            </article>
+          </div>
+
+          <div class="col-md-6">
+            <article class="project-model-card" aria-label="Robot Dog Kit">
+              <a class="project-model-heading" href="dog-kit/index.html">
+                <h3>Robot Dog Kit</h3><span class="project-model-more">See more <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </a>
+              <iframe class="project-model-view" src="dog-kit/index.html?embed=1" title="Robot Dog Kit interactive 3D preview" loading="lazy"></iframe>
+            </article>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="icon-box project-summary-card icon-box2">
+              <div class="icon"><i class="bx bxs-school"></i></div>
+              <h4 class="title"><a href="https://cdsj5robot.com/new_homepage.html">Robot class website</a></h4>
+              <p class="description">An interactive website for learning and sharing knowledge about robotics.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="icon-box project-summary-card icon-box4">
+              <div class="icon"><i class="bx bxs-hand"></i></div>
+              <h4 class="title"><a href="robotic_arm/dist/index.html">Robotic Arm</a></h4>
+              <p class="description">A robotic arm project that demonstrates automation and precision control.</p>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex align-items-stretch">
+            <div class="icon-box project-summary-card project-upcoming">
+              <div class="icon"><i class="bx bx-music" aria-hidden="true"></i></div>
+              <h4 class="title">Castella <span lang="zh-Hant">（自動鐵琴機）</span></h4>
+              <p class="description">An automated glockenspiel. Project details and demonstrations coming soon.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
 
     <section id="skills" class="skills section-bg">
       <div class="container">
 
         <div class="section-title">
           <h2>Skills</h2>
-          <p>Through my studies, I have gained proficiency in the following areas</p>
         </div>
 
-        <div class="row skills-content">
-
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">Python <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+        <div class="skill-showcase" id="skill-pool">
+          <div class="skill-tray">
+            <div class="skill-pool-stage" id="skill-pool-stage" aria-busy="true">
+              <p class="skill-pool-status" id="skill-pool-status" role="status">Loading…</p>
+              <div class="skill-ball-targets" id="skill-ball-targets" role="group" aria-label="Choose a skill"></div>
             </div>
-
-            <div class="progress">
-              <span class="skill">c++ <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">c <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Lua <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">lego Ev3 <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">Microsoft Office Suite <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-
-
-
           </div>
-
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          <aside class="skill-detail" lang="en" aria-labelledby="skill-detail-title">
+            <div class="skill-detail-top"><span id="skill-detail-category">PROGRAMMING</span><span id="skill-detail-number">02 / 16</span></div>
+            <div id="skill-detail-content" aria-live="polite" aria-atomic="true">
+              <h3 id="skill-detail-title">Python</h3>
+              <p id="skill-detail-description">I began learning Python in 2019, practicing basic syntax and algorithms. I also learned Beautiful Soup and Selenium for web scraping and browser automation. My learning led to a Second Prize in the 2021–2022 Python Programming Challenge and a Python Level 1 certificate.</p>
+              <div class="skill-detail-evidence" id="skill-detail-evidence">
+                <h4>Projects &amp; Achievements</h4>
+                <ul id="skill-detail-records">
+                  <li><a href="dog-kit/index.html" target="_blank" rel="noopener noreferrer">Robot Dog Kit<span aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://i.imgur.com/QBnBH8w.jpg" target="_blank" rel="noopener noreferrer">2021–2022 Python Programming Challenge, Macau (Hengqin) Division — Second Prize<span aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://i.imgur.com/upGCBcY.jpg" target="_blank" rel="noopener noreferrer">Junior Software Programming Test System — Python Level 1<span aria-hidden="true">↗</span></a></li>
+                </ul>
               </div>
             </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Adobe Premiere Pro<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Adobe Illustrator <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Adobe Photoshop <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
+            <div class="skill-detail-pagination"><button type="button" id="skill-previous" aria-label="Previous skill"><i class="bi bi-arrow-left" aria-hidden="true"></i></button><span id="skill-detail-counter" aria-hidden="true">Python</span><button type="button" id="skill-next" aria-label="Next skill"><i class="bi bi-arrow-right" aria-hidden="true"></i></button></div>
+          </aside>
+          <noscript><p>Enable JavaScript to explore the 3D skill collection.</p></noscript>
         </div>
 
       </div>
     </section>
 
     <section id="resume" class="resume section-bg">
-      <div>
-        <script  src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      </div>
 
       <div class="container">
 
         <div class="section-title">
           <h2>Resume</h2>
         </div>
-        <h3 class="resume-title">School organizations</h3>
-        <div class="body">
-          <ul id="time-line">
-              <li>
-                <div class="resume-item pb-0">
-                  <h4>Programming</h4>
-                  <p><em>Innovative and deadline-driven Software Engineer with 5+ years of experience designing and learning algorithms.</em></p>
-                </div>
-              </li>
-              <li>
-                  <div class="resume-item">
-                    <h4>Prefect</h4>
-                    <h5>2019 - 2020</h5>
-                    <p><em>member</em></p>
-                    <p>All team members work together towards common goals, leveraging each other's strengths and skills.</p>
-                  </div>
-              </li>
-              <li>
-                <div class="resume-item">
-                  <h4>Student Council</h4>
-                  <h5>2020 - 2022</h5>
-                  <p><em>General Affairs Department Member</em></p>
-                  <p>As a member of the General Affairs Department, I assisted in organizing school events and managing logistical operations.</p>
-                  <h5>2022 - 2023</h5>
-                  <p><em>Head of General Affairs Department</em></p>
-                  <p>As the Head of the General Affairs Department, I led a team to oversee administrative tasks and ensure the efficient operation of school events.</p>
-                  <p>Serving as the Department Head of General Affairs, I was responsible for coordinating logistics and supporting various school initiatives.</p>
-                </div>
-              </li>
-              <li>
-                <div class="resume-item">
-                  <h4>volleyball Team</h4>
-                  <h5>2022 - 2024</h5>
-                  <p>During my high school years from 2022 to 2024, I played volleyball for my school's team. In addition, I had joined Lap Fong Sports Association. </p>
-                </div>
-              </li>
-          </ul>
-        </div>
+        <h3 class="resume-title" id="school-organizations-title">School organizations</h3>
+        <ul class="school-organization-cards" aria-labelledby="school-organizations-title" tabindex="0">
+          <li>
+            <article class="organization-card organization-card--programming" aria-labelledby="organization-programming-title" style="--organization-accent: #9fd7e9">
+              <div class="organization-surface" aria-hidden="true"><img class="organization-photo" src="assets/organizations/programming-class.png" alt="" loading="eager" decoding="sync"></div>
+              <div class="organization-topbar"><span class="organization-years">5+ YEARS</span><span class="organization-school">PROGRAMMING</span></div>
+              <button type="button" class="organization-emblem organization-emblem--hexagon" aria-label="Programming Class" aria-expanded="false" aria-controls="organization-programming-details">
+                <svg class="organization-hexagon" viewBox="0 0 164 180" fill="none"><path d="M82 3 158 47v86l-76 44-76-44V47Z" fill="#10212af5" stroke="currentColor" stroke-width="2"/><path d="m82 12 68 39v78l-68 39-68-39V51Z" stroke="currentColor" stroke-opacity=".8"/></svg>
+                <i class="bi bi-code-slash"></i><span class="organization-emblem-name">PROGRAMMING<br>CLASS</span><span class="organization-emblem-caption">ALGORITHMS &amp; CODE</span>
+              </button>
+              <div class="organization-info" id="organization-programming-details" aria-hidden="true">
+
+                <h4 id="organization-programming-title">Programming Class</h4>
+                <p class="organization-description">I have spent over five years in Programming Class, developing my software development and algorithm design skills while learning to solve problems creatively and meet deadlines.</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="organization-card organization-card--prefect" aria-labelledby="organization-prefect-title" style="--organization-accent: #e2d4a2">
+              <div class="organization-surface" aria-hidden="true"><img class="organization-photo" src="assets/organizations/prefect.jpg" alt="" loading="eager" decoding="sync"></div>
+              <div class="organization-topbar"><span class="organization-years">2019 - 2020</span><span class="organization-school">CDSJ5</span></div>
+              <button type="button" class="organization-emblem" aria-label="Prefect" aria-expanded="false" aria-controls="organization-prefect-details"><i class="bi bi-shield-check"></i><span class="organization-emblem-name">PREFECT</span><span class="organization-emblem-caption">SERVICE &amp; TEAMWORK</span></button>
+              <div class="organization-info" id="organization-prefect-details" aria-hidden="true">
+
+                <h4 id="organization-prefect-title">Member</h4>
+                <p class="organization-description">I worked with other team members toward shared goals, drawing on our different strengths and skills.</p>
+              </div>
+
+            </article>
+          </li>
+          <li>
+            <article class="organization-card organization-card--council-member" aria-labelledby="organization-council-member-title" style="--organization-accent: #ded4a0">
+              <div class="organization-surface" aria-hidden="true"><img class="organization-photo" src="assets/organizations/student-council-member.jpg" alt="" loading="eager" decoding="sync"></div>
+              <div class="organization-topbar"><span class="organization-years">2020 - 2022</span><span class="organization-school">CDSJ5</span></div>
+              <button type="button" class="organization-emblem" aria-label="Student Council, General Affairs Department Member" aria-expanded="false" aria-controls="organization-council-member-details"><i class="bi bi-people-fill"></i><span class="organization-emblem-name">STUDENT<br>COUNCIL</span><span class="organization-emblem-caption">GENERAL AFFAIRS</span></button>
+              <div class="organization-info" id="organization-council-member-details" aria-hidden="true">
+
+                <h4 id="organization-council-member-title">General Affairs Department Member</h4>
+                <p class="organization-description">As a member of the General Affairs Department, I assisted in organizing school events and managing logistical operations.</p>
+              </div>
+
+            </article>
+          </li>
+          <li>
+            <article class="organization-card organization-card--council-head" aria-labelledby="organization-council-head-title" style="--organization-accent: #dab778">
+              <div class="organization-surface" aria-hidden="true"><img class="organization-photo" src="assets/organizations/student-council-head.jpg" alt="" loading="eager" decoding="sync"></div>
+              <div class="organization-topbar"><span class="organization-years">2022 - 2023</span><span class="organization-school">CDSJ5</span></div>
+              <button type="button" class="organization-emblem" aria-label="Student Council, Head of General Affairs Department" aria-expanded="false" aria-controls="organization-council-head-details"><i class="bi bi-people-fill"></i><span class="organization-emblem-name">STUDENT<br>COUNCIL</span><span class="organization-emblem-caption">GENERAL AFFAIRS</span></button>
+              <div class="organization-info" id="organization-council-head-details" aria-hidden="true">
+
+                <h4 id="organization-council-head-title">Head of General Affairs Department</h4>
+                <p class="organization-description">As Head of the General Affairs Department, I led a team to oversee administrative tasks and coordinate logistics, supporting the smooth operation of school events and initiatives.</p>
+              </div>
+
+            </article>
+          </li>
+          <li>
+            <article class="organization-card organization-card--volleyball" aria-labelledby="organization-volleyball-title" style="--organization-accent: #a7d1df">
+              <div class="organization-surface" aria-hidden="true"><img class="organization-photo" src="assets/organizations/volleyball.jpg" alt="" loading="eager" decoding="sync"></div>
+              <div class="organization-topbar"><span class="organization-years">2022 - 2024</span><span class="organization-school">CDSJ5</span></div>
+              <button type="button" class="organization-emblem" aria-label="Volleyball Team" aria-expanded="false" aria-controls="organization-volleyball-details"><i class="bi bi-trophy"></i><span class="organization-emblem-name">VOLLEYBALL<br>TEAM</span><span class="organization-emblem-caption">CDSJ5</span></button>
+              <div class="organization-info" id="organization-volleyball-details" aria-hidden="true">
+
+                <h4 id="organization-volleyball-title">Team Member</h4>
+                <p class="organization-description">I played for my school’s volleyball team during high school from 2022 to 2024. I also joined Lap Fong Sports Association.</p>
+              </div>
+
+            </article>
+          </li>
+        </ul>
         <h3 class="resume-title">Professional Experience</h3>
-        <ul id="time-line">
+        <ul class="time-line">
           <li>
             <div class="resume-item">
               <h5>2019</h5>
               <h4>Python Programming</h4>
-              <p><em>Studied basic syntax and Algorithms</em></p>
-              <p>
+              <p><em>Studied basic syntax and algorithms</em></p>
               <ul>
-                <p>• Learned the fundamental syntax of Python and implemented basic algorithms to solve various problems. </p>
-                <p>• Beautiful Soup </p>
-                <p>• Selenium </p>
+                <li>Learned the fundamental syntax of Python and implemented basic algorithms to solve various problems.</li>
+                <li>Beautiful Soup</li>
+                <li>Selenium</li>
               </ul>
-              </p>
             </div>
           </li>
           <li>
             <div class="resume-item">
               <h5>2021-2022</h5>
-              <h4>cpp and c Programming</h4>
-              <p><em>Studied basic syntax and Algorithms</em></p>
-              <p>Learned the fundamental syntax of cpp and c and implemented basic algorithms to solve various problems.</p>
+              <h4>C++ and C Programming</h4>
+              <p><em>Studied basic syntax and algorithms</em></p>
+              <p>Learned the fundamental syntax of C++ and C and implemented basic algorithms to solve various problems.</p>
               <h4>Competition</h4>
-              <p><ul>
-                <p>•  GLOBAL MATHEMATICS CODING COMPETITION GRADE 7-9 SILVER AWARD MACAU </p>
-                <p>•  2021-2022 National Youth Electronic Information Intelligence Innovation Competition</p>
-              </ul></p>
+              <ul>
+                <li>GLOBAL MATHEMATICS CODING COMPETITION GRADE 7-9 SILVER AWARD MACAU</li>
+                <li>2021-2022 National Youth Electronic Information Intelligence Innovation Competition</li>
+              </ul>
             </div>
           </li>
           <li>
             <div class="resume-item">
               <h5>2022-2023</h5>
-              <h4>html, css and js Programming</h4>
+              <h4>HTML, CSS, and JavaScript Programming</h4>
               <p><em>Studied basic syntax</em></p>
-              <p>Learned the fundamental website skill.</p>
+              <p>Learned the fundamentals of web development.</p>
               <h4>Competition</h4>
               <p>The 1st Macau Artificial Intelligence Innovation Challenge High School Category First Prize </p>
             </div>
@@ -312,12 +328,12 @@
             <div class="resume-item">
               <h5>2023-2024</h5>
               <h4>Competition</h4>
-              <p><ul>
-                <p>•  csp-j round 1 thrid Prize</p>
-                <p>•  csp-s round 1 Second Prize</p>
-                <p>•  MOIC 2024 Bronze Award</p>
-                <p>•  HK & Macau Cisco Networking Skills Competition 2024 GOLD</p>
-              </ul></p>
+              <ul>
+                <li>csp-j round 1 third Prize</li>
+                <li>csp-s round 1 Second Prize</li>
+                <li>MOIC 2024 Bronze Award</li>
+                <li>HK & Macau Cisco Networking Skills Competition 2024 GOLD</li>
+              </ul>
               <h4>Certification</h4>
               <ul>
                 <li>澳門科技大學計算機科學與工程學院校友會 獎學金</li>
@@ -333,67 +349,45 @@
              <div class="resume-item">
               <h5>2024-2025</h5>
               <h4>Competition</h4>
-              <p><ul>
-                <p>•  大灣區青少年人工智能及網絡安全挑戰賽2024 全場總冠軍</p>
-                <p>•  全國信息學奧林匹克聯賽 NOIP2024 貳等獎</p>
-                <p>•  第 7 屆全澳中學生手機網站技術技能比賽 亞軍</p>
-                <p>•  微信小程序全球創新挑戰賽澳門區域賽 一等獎</p>
-                <p>•  2024全澳中學生資訊科技知識問答比賽（高中組） 優異奬</p>
-                <p>•  2024 CSP非專業級軟體能力認證 提高級 第二輪 叄等獎</p>
-                <p>•  2024 CSP非專業級軟體能力認證 入門級 第二輪 壹等獎</p>
+              <ul>
+                <li>大灣區青少年人工智能及網絡安全挑戰賽2024 全場總冠軍</li>
+                <li>全國信息學奧林匹克聯賽 NOIP2024 貳等獎</li>
+                <li>第 7 屆全澳中學生手機網站技術技能比賽 亞軍</li>
+                <li>微信小程序全球創新挑戰賽澳門區域賽 一等獎</li>
+                <li>2024全澳中學生資訊科技知識問答比賽（高中組） 優異奬</li>
+                <li>2024 CSP非專業級軟體能力認證 提高級 第二輪 叄等獎</li>
+                <li>2024 CSP非專業級軟體能力認證 入門級 第二輪 壹等獎</li>
 
-              </ul></p>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="resume-item">
+              <h5>2025-2026</h5>
+              <h4>Competition</h4>
+              <ul lang="zh-Hant">
+                <li>澳門信息學奧林匹克競賽（MOI 2025）高級組銅獎，獲選為 CCF NOI 2025 澳門代表隊成員</li>
+                <li>參加第 42 屆全國青少年信息學奧林匹克競賽（CCF NOI 2025），獲頒參賽證書</li>
+              </ul>
+              <h4>Certification</h4>
+              <ul lang="zh-Hant">
+                <li>國立臺灣大學 114 學年度第 2 學期「大學國文：教師推薦作品」：〈面紅卻沒醉〉獲推薦為課堂優秀作品</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="resume-item">
+              <h5>2026-2027</h5>
+              <h4>Competition</h4>
+              <ul lang="zh-Hant">
+                <li>2026 新竹 × 梅竹黑客松黑客組 Logitech 第三名</li>
+              </ul>
             </div>
           </li>
         </ul>
       </div>
 
     </section>
-    <section id="services" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Project</h2>
-          <p>Explore a variety of robotics and technology projects designed to enhance learning and innovation. From building a robotic dog to programming an LED light cube, each project provides hands-on experience and technical skills development.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box icon-box1">
-              <div class="icon"><i class="bx bxs-dog"></i></div>
-              <h4 class="title">Robot dog kit</h4>
-              <p class="description">A comprehensive kit for building and programming a robotic dog from scratch.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box icon-box2">
-              <div class="icon"><i class="bx bxs-school"></i></div>
-              <h4 class="title"><a href="https://cdsj5robot.com/new_homepage.html">Robot class website</a></h4>
-              <p class="description">An interactive website for learning and sharing knowledge about robotics.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box icon-box3">
-              <div class="icon"><i class="bx bx-cube"></i></div>
-              <h4 class="title">6x6x6 light cube</h4>
-              <p class="description">A 6x6x6 LED cube that can be programmed to display various light patterns.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box icon-box4">
-              <div class="icon"><i class="bx bxs-hand"></i></div>
-              <h4 class="title"><a href="robotic_arm\dist\index.html">Robotic Arm</a></h4>
-              <p class="description">A robotic arm project that demonstrates automation and precision control.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
@@ -404,331 +398,380 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-IT">IT</li>
-              <li data-filter=".filter-Other-subject">Other subject</li>
-              <li data-filter=".filter-Course">Course</li>
+              <li><button type="button" data-filter="*" class="filter-active" aria-pressed="true">All</button></li>
+              <li><button type="button" data-filter=".filter-IT" aria-pressed="false">IT</button></li>
+              <li><button type="button" data-filter=".filter-Other-subject" aria-pressed="false">Other subject</button></li>
+              <li><button type="button" data-filter=".filter-Course" aria-pressed="false">Course</button></li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container">
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/JSUFKa2.jpg" class="img-fluid" alt="">
+              <img class="img-fluid" src="assets/certificates/2025-2026-01.jpg" alt="澳門信息學奧林匹克競賽（MOI 2025）高級組銅獎證書" width="3052" height="2160" loading="lazy" decoding="async">
+              <div class="portfolio-info">
+                <h4 lang="zh-Hant">澳門信息學奧林匹克競賽（MOI 2025）高級組銅獎</h4>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/certificates/2025-2026-01.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="放大：澳門信息學奧林匹克競賽（MOI 2025）高級組銅獎"><i class="bx bx-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
+            <div class="portfolio-wrap">
+              <img class="img-fluid" src="assets/certificates/2025-2026-02.jpg" alt="第 42 屆全國青少年信息學奧林匹克競賽（CCF NOI 2025）證書" width="2742" height="1935" loading="lazy" decoding="async">
+              <div class="portfolio-info">
+                <h4 lang="zh-Hant">第 42 屆全國青少年信息學奧林匹克競賽（CCF NOI 2025）</h4>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/certificates/2025-2026-02.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="放大：第 42 屆全國青少年信息學奧林匹克競賽（CCF NOI 2025）"><i class="bx bx-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
+            <div class="portfolio-wrap">
+              <img class="img-fluid" src="assets/certificates/2025-2026-03.jpg" alt="國立臺灣大學「大學國文：教師推薦作品」證書" width="3062" height="2160" loading="lazy" decoding="async">
+              <div class="portfolio-info">
+                <h4 lang="zh-Hant">國立臺灣大學「大學國文：教師推薦作品」</h4>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/certificates/2025-2026-03.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="放大：國立臺灣大學「大學國文：教師推薦作品」"><i class="bx bx-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
+            <div class="portfolio-wrap">
+              <img class="img-fluid" src="assets/certificates/2026-2027-01.png" alt="2026 新竹 × 梅竹黑客松 — 黑客組 Logitech 第三名證書" width="1323" height="1871" loading="lazy" decoding="async">
+              <div class="portfolio-info">
+                <h4 lang="zh-Hant">2026 新竹 × 梅竹黑客松 — 黑客組 Logitech 第三名</h4>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/certificates/2026-2027-01.png" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="放大：2026 新竹 × 梅竹黑客松 — 黑客組 Logitech 第三名"><i class="bx bx-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
+            <div class="portfolio-wrap">
+              <img src="https://imgur.com/JSUFKa2.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.gov.mo/zh-hant/news/1123796/">大灣區青少年人工智能及網絡安全挑戰賽2024</a></h4>
                 <p>全場總冠軍</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/JSUFKa2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/JSUFKa2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/tkXxTj2.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/tkXxTj2.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.gov.mo/zh-hant/news/1081588/">HK & Macau Cisco Networking Skills Competition 2024</a></h4>
                 <p>GOLD</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/tkXxTj2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/tkXxTj2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/9eHRq1F.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/9eHRq1F.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.gov.mo/zh-hant/news/1107205/">第 7 屆全澳中學生手機網站技術技能比賽</a></h4>
                 <p>亞軍</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/9eHRq1F.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/9eHRq1F.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/CZ3NXil.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/CZ3NXil.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://edu.weixin.qq.com/eventDetails?id=3690605858418327552">微信小程序全球創新挑戰賽澳門區域賽</a></h4>
                 <p>一等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/CZ3NXil.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/CZ3NXil.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/v0aCQOu.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/v0aCQOu.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.cdsj5.edu.mo/cht/apps/detail/?id=1173&pa=1">全國信息學奧林匹克聯賽 NOIP2024</a></h4>
                 <p>貳等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/v0aCQOu.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/v0aCQOu.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/nuFpIev.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/nuFpIev.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.noi.cn/hjmd/mdgs/2024/2024-11-19/834439.shtml">2024 CSP非專業級軟體能力認證 提高級 第二輪</a></h4>
                 <p>叄等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/nuFpIev.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/nuFpIev.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/iaakPBa.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/iaakPBa.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.noi.cn/hjmd/mdgs/2024/2024-11-19/834439.shtml">2024 CSP非專業級軟體能力認證 入門級 第二輪</a></h4>
                 <p>壹等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/iaakPBa.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/iaakPBa.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/tOZ1j3l.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/tOZ1j3l.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.noi.cn/hjmd/mdgs/2023/2023-11-19/798228.shtml">2023 CSP非專業級軟體能力認證 提高級 第二輪</a></h4>
                 <p>貳等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/tOZ1j3l.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/tOZ1j3l.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/FSSW3Zf.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/FSSW3Zf.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.noi.cn/hjmd/mdgs/2023/2023-11-19/798228.shtml">2023 CSP非專業級軟體能力認證 入門級 第二輪</a></h4>
                 <p>叄等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/FSSW3Zf.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/FSSW3Zf.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/D1lsn4r.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/D1lsn4r.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4><a href="https://www.cdsj5.edu.mo/cht/apps/detail/?id=1075&pa=1">2024全澳中學生資訊科技知識問答比賽（高中組）</a></h4>
                 <p>優異奬</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/D1lsn4r.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/D1lsn4r.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <!----->
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/3xF9UXj.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/3xF9UXj.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>2024 MOIC</h4>
                 <p>BRONZE</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/3xF9UXj.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/3xF9UXj.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/Q7e7efr.jpg?1" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/Q7e7efr.jpg?1" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>第一屆澳門人工智能創新挑戰賽</h4>
                 <p>高中組 一等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/Q7e7efr.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/Q7e7efr.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/Su00k2H.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/Su00k2H.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>澳門科技大學計算機科學與工程學院校友會</h4>
                 <p>獎學金</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/Su00k2H.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/Su00k2H.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/gUG0CAB.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/gUG0CAB.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>2023-2024 學業一等獎</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/gUG0CAB.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/gUG0CAB.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/zgGMimW.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/zgGMimW.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>2025港澳盃數學奧林匹克公開賽(澳門區)</h4>
                 <p>銅獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/zgGMimW.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/zgGMimW.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/CjhWAUs.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/CjhWAUs.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Word 2019</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/CjhWAUs.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/CjhWAUs.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/15E5QPM.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/15E5QPM.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Word 2019 Expert</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/15E5QPM.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/15E5QPM.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/tEE4EvP.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/tEE4EvP.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>PowerPoint 2019</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/tEE4EvP.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/tEE4EvP.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/JYqTSrL.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/JYqTSrL.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Excel 2019</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/JYqTSrL.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/JYqTSrL.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/m7c2bEo.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/m7c2bEo.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Excel 2019 Expert</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/m7c2bEo.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/m7c2bEo.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/krC14WX.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/krC14WX.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Microsoft Office Specialist - Associate (Office 2019)</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/krC14WX.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/krC14WX.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/CHosuta.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/CHosuta.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Microsoft Office Specialist - Expert (Office 2019)</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/CHosuta.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/CHosuta.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/bByBoJf.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/bByBoJf.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Singapore Math Challenge 2024</h4>
                 <p>Outstanding Award</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/bByBoJf.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/bByBoJf.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/QBnBH8w.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/QBnBH8w.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>2021-2022全國青少年電子資訊智慧創新競賽</h4>
                 <p>澳門賽區（橫琴）Python程式設計挑戰賽 二等獎</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/QBnBH8w.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/QBnBH8w.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/wNmPYp9.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/wNmPYp9.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>GLOBAL MATHEMATICS CODING COMPETITION 世界AI智能創意編程大賽 2022</h4>
                 <p>GRADE 7-9 SILVER AWARD MACAU PRELIMINARY</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/wNmPYp9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/wNmPYp9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/upGCBcY.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/upGCBcY.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>青少年軟體程式設計 等級考試證書</h4>
                 <p>Python 一級</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/upGCBcY.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/upGCBcY.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
@@ -736,104 +779,104 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/dfnOKFY.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/dfnOKFY.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>ABRSM Piano Grade 3</h4>
                 <p>Merit</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/dfnOKFY.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/dfnOKFY.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/1yHLB3W.jpg?1" class="img-fluid" alt="">
+              <img src="https://imgur.com/1yHLB3W.jpg?1" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>FISO Nation Round 2024-2025 IT</h4>
                 <p>SILVER</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/1yHLB3W.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/1yHLB3W.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/Rs3bxOX.jpg?1" class="img-fluid" alt="">
+              <img src="https://imgur.com/Rs3bxOX.jpg?1" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>FISO Nation Round 2024-2025 Math</h4>
                 <p>SILVER</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://imgur.com/Rs3bxOX.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/Rs3bxOX.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/Cw2GDzS.jpg?1" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/Cw2GDzS.jpg?1" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>FISO Nation Round 2024 Physics</h4>
                 <p>CATEGORY-2	SILVER</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/Cw2GDzS.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/Cw2GDzS.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/vwb0m6y.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/vwb0m6y.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>FISO International Round 2024 Physics</h4>
                 <p>CATEGORY-2	SILVER</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/vwb0m6y.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/vwb0m6y.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Other-subject">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/A1bPeC4.jpg" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/A1bPeC4.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>FISO International Round 2024 Chemistry</h4>
                 <p>CATEGORY-2	SILVER</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/A1bPeC4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/A1bPeC4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Course">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/ijFW0CB.jpg?1" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/ijFW0CB.jpg?1" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>Huawei ICT Competition 2023-2024</h4>
                 <p>Hong Kong Secondary School Final Contest</p>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/ijFW0CB.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/ijFW0CB.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-IT">
             <div class="portfolio-wrap">
-              <img src="https://imgur.com/KA3jJmZ.jpg" class="img-fluid" alt="">
+              <img src="https://imgur.com/KA3jJmZ.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-links">
-                <a href="https://imgur.com/KA3jJmZ.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://imgur.com/KA3jJmZ.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-Course">
             <div class="portfolio-wrap">
-              <img src="https://i.imgur.com/JVwTPgB.jpg?1" class="img-fluid" alt="">
+              <img src="https://i.imgur.com/JVwTPgB.jpg?1" class="img-fluid" alt="" loading="lazy" decoding="async">
               <div class="portfolio-info">
                 <h4>《金融知識進校園》課程</h4>
               </div>
               <div class="portfolio-links">
-                <a href="https://i.imgur.com/JVwTPgB.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                <a href="https://i.imgur.com/JVwTPgB.jpg?1" data-gallery="portfolioGallery" class="portfolio-lightbox" aria-label="Enlarge certificate"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
@@ -848,31 +891,16 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>You can contact me through these ways.</p>
+          <p>You can contact me by email.</p>
         </div>
 
         <div class="row">
 
-          <div class="col-lg-4 col-md-4">
-            <div class="contact-about">
-              <h3>Donald</h3>
-              <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=100088033736567" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/donaldoge0_0/" class="instagram"><i class="bi bi-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
+          <div class="col-12">
             <div class="info">
               <div class="d-flex align-items-center mt-4">
                 <i class="bi bi-envelope"></i>
-                <p>123hochonmeng@gmail.com</p>
-              </div>
-
-              <div class="d-flex align-items-center mt-4">
-                <i class="bi bi-phone"></i>
-                <p>+853 62089885</p>
+                <p><a href="mailto:123hochonmeng@gmail.com">123hochonmeng@gmail.com</a></p>
               </div>
 
             </div>
@@ -883,7 +911,7 @@
     </section>
 
   </main>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
 
 
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -893,6 +921,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/skill-pool.bundle.js"></script>
+  <script src="assets/js/organization-cards.js"></script>
 
 </body>
 

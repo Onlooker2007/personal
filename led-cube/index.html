@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06090d">
+  <meta name="description" content="Objectives, making process, and results of a 6×6×6 LED cube project, with an interactive 3D demonstration.">
+  <title>LIGHT CUBE — 6×6×6 Project</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="../assets/js/project-embed.js"></script>
+  <link rel="stylesheet" href="../assets/css/project-embed.css">
+</head>
+<body>
+  <main id="project-page">
+  <section id="experience" aria-label="Interactive LED demonstration">
+    <div id="stage" aria-label="Interactive 3D model of a 6×6×6 LED cube"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="../index.html#services" aria-label="Back to portfolio"><svg viewBox="0 0 32 36" fill="none" aria-hidden="true"><path d="m16 2 14 8v16l-14 8L2 26V10L16 2Zm0 0v16m14-8-14 8L2 10m14 8v16M9 6v16l14 8M23 6v16L9 30M2 18l14 8 14-8" stroke="currentColor" stroke-width="1.2"/></svg><span>DONALD / LIGHT CUBE</span></a>
+      <nav class="project-nav" aria-label="Project navigation"><a href="#about">OBJECTIVES</a><a href="#structure">PROCESS</a><a href="#patterns">RESULTS</a></nav>
+      <button class="icon-button settings-toggle" id="settings-toggle" aria-label="Open controls" aria-expanded="false" aria-controls="settings"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 17h16M8 4v6m8 4v6" stroke="currentColor" stroke-width="1.5"/></svg><span>CONTROLS</span></button>
+    </header>
+    <section class="intro" aria-label="Project title"><h1>6x6x6<br>LED<br><em>Cube</em></h1></section>
+    <div id="rotation-hint" class="rotation-hint" role="status" hidden><svg viewBox="0 0 64 32" fill="none" aria-hidden="true"><path d="M5 16h54M17 4 5 16l12 12M47 4l12 12-12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Drag to rotate</span></div>
+    <section class="settings" id="settings" aria-label="Light controls" hidden>
+      <div class="panel-heading"><span>LIGHT PARAMETERS</span><button id="close-settings" aria-label="Close controls">×</button></div>
+      <label class="slider-label" for="speed">Speed <output id="speed-value">1.0×</output></label><input id="speed" type="range" min="0.25" max="2.5" step="0.05" value="1">
+      <label class="slider-label" for="brightness">Brightness <output id="brightness-value">80%</output></label><input id="brightness" type="range" min="0.15" max="1.5" step="0.05" value="0.8">
+      <div class="slider-label">Color <span id="palette-label">Blue</span></div>
+      <div class="palettes" role="group" aria-label="Color selection"><button class="palette active" data-palette="ice" aria-label="Blue" aria-pressed="true" style="--swatch:#53c5ff"></button><button class="palette" data-palette="aurora" aria-label="Blue / green" aria-pressed="false" style="--swatch:linear-gradient(135deg,#37ffb4,#8661ff)"></button><button class="palette" data-palette="ember" aria-label="Orange / red" aria-pressed="false" style="--swatch:linear-gradient(135deg,#ffc379,#ff453b)"></button></div>
+      <label class="toggle-row" for="auto-rotate">Auto rotate<input id="auto-rotate" type="checkbox" checked><span class="switch"></span></label>
+      <label class="toggle-row" for="show-wires">Show wires<input id="show-wires" type="checkbox" checked><span class="switch"></span></label>
+    </section>
+    <section class="bottom-console" aria-label="Animation controls">
+      <div class="effects" role="group" aria-label="Select pattern"><button class="effect active" data-effect="0" aria-pressed="true"><span class="effect-art wave-art">∿</span><span>Wave</span></button><button class="effect" data-effect="1" aria-pressed="false"><span class="effect-art helix-art">♧</span><span>Helix</span></button><button class="effect" data-effect="2" aria-pressed="false"><span class="effect-art rain-art">╎╎╎</span><span>Rain</span></button><button class="effect" data-effect="3" aria-pressed="false"><span class="effect-art pulse-art">◎</span><span>Pulse</span></button><button class="effect" data-effect="4" aria-pressed="false"><span class="effect-art scan-art">▱</span><span>Scan</span></button><button class="effect" data-effect="5" aria-pressed="false"><span class="effect-art vortex-art">◌</span><span>Vortex</span></button><button class="effect" data-effect="6" aria-pressed="false"><span class="effect-art spark-art">✧</span><span>Stars</span></button><button class="effect" data-effect="7" aria-pressed="false"><span class="effect-art all-art">⠿</span><span>All on</span></button></div>
+      <div class="sequence-track"><div id="sequence-progress"></div></div>
+    </section>
+    <footer class="hero-footer"><span>LED CUBE PROJECT</span><a href="#about">READ ABOUT THE PROJECT <span>↓</span></a></footer>
+    <div id="loading" class="loading" role="status"><div class="loader-cube">✧</div><span>LOADING MODEL</span><small>Loading 216 LED positions…</small></div>
+    <div id="toast" class="toast" role="status"></div>
+  </section>
+
+
+
+  <div class="project-text">
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">Objectives</h2>
+      <div class="text-row"><p>The aim of this project is to understand how individual LEDs can form a three-dimensional display. The cube contains 216 LEDs arranged in six layers, with 36 LEDs in each layer.</p></div>
+      <div class="text-row"><p>I wanted to understand the connections between the LEDs and learn how to control light patterns using X, Y, and Z coordinates. I also wanted to see how changing the timing and brightness could produce different movements.</p></div>
+    </section>
+    <section id="structure" aria-labelledby="structure-title">
+      <h2 id="structure-title">Making Process</h2>
+      <div class="text-row"><p>The cube is designed as six identical layers, each containing 36 LEDs in a 6 × 6 grid. Keeping the same spacing within and between the layers gives each LED a consistent X, Y, and Z position. The LED leads connect to <a class="photo-reference" href="#photo-columns">horizontal layer wires and vertical column wires</a>, which also help support the structure.</p><figure class="margin-photo right" id="photo-columns"><a href="./assets/photos/construction-2.jpg" target="_blank" rel="noopener" aria-label="View full photograph: A single LED layer with upright metal columns during assembly"><img src="./assets/photos/construction-2.jpg" alt="A single LED layer with upright metal columns during assembly" width="2880" height="3840" loading="lazy" decoding="async"></a></figure></div>
+      <div class="text-row"><p>A practical way to assemble the cube is to use a <a class="photo-reference" href="#photo-template">template with 36 equally spaced holes</a> to hold the LEDs while soldering each layer. The LED polarity needs to be consistent throughout the grid. Each layer can be checked before stacking the six layers and connecting the vertical wires. The layer wires and column wires must remain electrically separate except through the LEDs.</p><figure class="margin-photo left" id="photo-template"><a href="./assets/photos/construction-1.jpg" target="_blank" rel="noopener" aria-label="View full photograph: LEDs held in a drilled template while preparing a layer"><img src="./assets/photos/construction-1.jpg" alt="LEDs held in a drilled template while preparing a layer" width="2880" height="3840" loading="lazy" decoding="async"></a></figure></div>
+      <div class="text-row"><p>Arduino can control this arrangement using layer multiplexing. Instead of providing a separate output for every LED, the circuit uses 36 column connections and <a class="photo-reference" href="#photo-layers">six layer connections</a>. The program loads the pattern for one layer, enables that layer briefly, and then moves to the next. Repeating this sequence quickly makes the layers appear to form one continuous display.</p><figure class="margin-photo right" id="photo-layers"><a href="./assets/photos/construction-4.jpg" target="_blank" rel="noopener" aria-label="View full photograph: Six assembled LED layers connected by vertical metal columns"><img src="./assets/photos/construction-4.jpg" alt="Six assembled LED layers connected by vertical metal columns" width="2880" height="3840" loading="lazy" decoding="async"></a></figure></div>
+      <div class="text-row"><p>The <a class="photo-reference" href="#photo-arduino">Arduino sends control signals</a> to the driver circuit rather than powering an entire layer directly from its output pins. Shift registers can expand the column outputs, while suitable transistor or MOSFET drivers switch the layers. Current-limiting resistors or constant-current LED drivers are needed, and the power supply and drivers must be chosen for the expected LED current. The Arduino and the driver circuit share a common ground.</p><figure class="margin-photo left" id="photo-arduino"><a href="./assets/photos/construction-5.jpg" target="_blank" rel="noopener" aria-label="View full photograph: Arduino Mega connected to the LED cube and prototyping board"><img src="./assets/photos/construction-5.jpg" alt="Arduino Mega connected to the LED cube and prototyping board" width="2880" height="3840" loading="lazy" decoding="async"></a></figure></div>
+      <div class="text-row"><p>In the Arduino program, the LED states can be stored in a three-dimensional array such as cube[z][y][x]. The display routine reads one layer at a time and sends its <a class="photo-reference" href="#photo-wiring">column data</a> to the drivers. All layers are disabled while changing the column data to reduce unintended flashes. The animation routine updates the array separately, so the display can keep refreshing while the pattern changes.</p><figure class="margin-photo right" id="photo-wiring"><a href="./assets/photos/construction-6.jpg" target="_blank" rel="noopener" aria-label="View full photograph: Close view of the LED grid with insulated wires attached to its connections"><img src="./assets/photos/construction-6.jpg" alt="Close view of the LED grid with insulated wires attached to its connections" width="2880" height="3840" loading="lazy" decoding="async"></a></figure></div>
+      <div class="text-row"><p>Each pattern uses the LED coordinates and the current time to decide which positions should be on. A wave changes the height of the active LEDs, while a falling pattern moves the active positions downward. If brightness control is needed, timed pulses can be added to the refresh routine; it is not enough to assign a brightness value without implementing it in the driver timing.</p></div>
+      <div class="text-row"><p>Breaking the cube into one layer at a time makes both assembly and troubleshooting easier to follow. I also find it useful to separate the animation logic from the display routine. This keeps the pattern code easier to understand while the Arduino continues scanning the layers at a steady rate.</p></div>
+    </section>
+    <section id="patterns" aria-labelledby="patterns-title">
+      <h2 id="patterns-title">Results</h2>
+      <div class="text-row"><p>The web demonstration shows all <a class="photo-reference" href="#photo-cube">216 LED positions</a> and includes eight animation modes. The model can be rotated and viewed from different angles, and the animation speed, brightness, and color can be adjusted.</p><figure class="margin-photo left" id="photo-cube"><a href="./assets/photos/construction-3.jpg" target="_blank" rel="noopener" aria-label="View full photograph: Close view of the assembled LED cube and its soldered joints"><img src="./assets/photos/construction-3.jpg" alt="Close view of the assembled LED cube and its soldered joints" width="2880" height="3840" loading="lazy" decoding="async"></a></figure></div>
+      <div class="text-row"><p>I found that a small number of LED positions can show several types of movement. The relationship between the brightness values over time is important to the result. The six-layer grid limits the detail of each pattern, so viewing it from different angles helps show whether the movement is clear.</p></div>
+      <div class="text-row"><p>The demonstration presents the structure and simulated light patterns. It does not measure the electrical performance of a physical circuit.</p></div>
+    </section>
+  </div>
+  </main><dialog id="photo-viewer" aria-label="Full-size photograph"><button type="button" aria-label="Close photograph" autofocus>×</button><img alt=""></dialog><script src="./photo-lightbox.js"></script><a class="back-to-top" href="#experience" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20V4m-7 7 7-7 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><script src="./assets/models/led-cube.data.js"></script><script src="./app.bundle.js"></script></body></html>
